@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a2e7b22c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="card-wrapper">
+        <input type="checkbox" id="flip" class="flip-checkbox">
+        <div class="card">
+            <div class="front">
+                <div class="inner">
+                    <div class="upper">
+                        <div class="magnifying-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                        <div class="product-container">
+                            <img src="https://cdn.fastpixel.io/fp/ret_img+v_3ca7+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_fekete_1.jpg" class="product-image" id="product-img">
+                        </div>
+                        <div class="color-options">
+                            <input type="radio" id="color-black" name="color" class="color-input" value="black" checked>
+                            <label for="color-black" class="color-btn black"></label>
+
+                            <input type="radio" id="color-red" name="color" class="color-input" value="red">
+                            <label for="color-red" class="color-btn red"></label>
+
+                            <input type="radio" id="color-blue" name="color" class="color-input" value="blue">
+                            <label for="color-blue" class="color-btn blue"></label>
+
+                            <input type="radio" id="color-white" name="color" class="color-input" value="white">
+                            <label for="color-white" class="color-btn white"></label>
+                        </div>
+                    </div>
+                    <div class="lower">
+                        <h2>Sony WH-1000XM5</h2>
+                        <div class="star-rating">★★★★☆</div>
+                        <div class="rating"><b>4.22</b> (5837 ratings)</div>
+                        <p class="price">€349.99</p>
+                    </div>
+                    <div class="buttons-container">
+                        <label for="flip" class="button info-button"><i class="fa-solid fa-circle-info"></i></label>
+                        <button class="button add-to-cart">Add to Cart</button>
+                        <button class="button save-button"><i class="fa-solid fa-heart-circle-plus"></i></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="inner">
+                    <p>WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones</p>
+                    <ul class="features">
+                        <li>
+                            <p><b>Bluetooth</b></p>
+                            <p>5.2</p>
+                        </li>
+                        <li>
+                            <p><b>ANC</b></p>
+                            <p>Yes</p>
+                        </li>
+                        <li>
+                            <p><b>Transparency mode</b></p>
+                            <p>Yes</p>
+                        </li>
+                        <li>
+                            <p><b>Drivers</b></p>
+                            <p>40mm</p>
+                        </li>
+                        <li>
+                            <p><b>Battery life</b></p>
+                            <p>30h</p>
+                        </li>
+                        <li>
+                            <p><b>Charging time</b></p>
+                            <p>3h</p>
+                        </li>
+                    </ul>
+                    <div class="availability">
+                        <p><b>Free shipping:</b> Est. delivery Mar. 4-5 <b>or</b></p>
+                        <p><b>Pick up</b> as early as today</p>
+                    </div>
+                    <label for="flip" class="button return"><i class="fa-solid fa-share"></i></label>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+            const img = document.getElementById('product-img');
+            const productContainer = document.querySelector('.product-container');
+            const magnifier = document.querySelector('.magnifying-icon')
+            productContainer.addEventListener('mouseenter', magnify);
+            productContainer.addEventListener('mouseleave', hide);
+            
+            let glass = document.createElement('div');
+            glass.setAttribute('class', 'img-magnifier-glass');
+            img.parentElement.insertBefore(glass, img);
+            glass.style.display = 'none';
+            function hide(){
+                glass.style.display = 'none';
+                magnifier.style.opacity = '1';
+            }
+            function magnify(){
+                magnifier.style.opacity = '0';
+                let zoom = 3;
+                let w, h, bw;
+
+                glass.style.backgroundImage = "url('" + img.src + "')";
+                glass.style.backgroundRepeat = "no-repeat";
+                glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+                bw = 3;
+                w = glass.offsetWidth / 2;
+                h = glass.offsetHeight / 2;
+                
+
+                glass.style.display = 'block';
+
+                glass.addEventListener("mousemove", moveMagnifier);
+                img.addEventListener("mousemove", moveMagnifier);
+
+                glass.addEventListener("touchmove", moveMagnifier);
+                img.addEventListener("touchmove", moveMagnifier);
+                
+                function moveMagnifier(e) {
+                    var pos, x, y;
+                    e.preventDefault();
+                    pos = getCursorPos(e);
+                    x = pos.x;
+                    y = pos.y;
+                    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+                    if (x < w / zoom) {x = w / zoom;}
+                    if (y > img.height - (h / zoom) - 60) {y = img.height - (h / zoom);}
+                    if (y < h / zoom) {y = h / zoom;}
+                    
+                    glass.style.left = (x - w) + "px";
+                    glass.style.top = (y - h) + "px";
+
+                    glass.style.backgroundPosition = "-" + (((x) * zoom) - w + bw) + "px -" + (((y + 30) * zoom) - h + bw) + "px";
+                }
+
+                function getCursorPos(e) {
+                    var a, x = 0, y = 0;
+                    e = e || window.event;
+                    
+                    a = img.getBoundingClientRect();
+
+                    x = e.pageX - a.left;
+                    y = e.pageY - a.top;
+                    x = x - window.pageXOffset;
+                    y = y - window.pageYOffset;
+                    return {x : x, y : y};
+                }
+            }
+
+            const colorInputs = document.querySelectorAll('.color-input');
+            const imageURLs = {
+                black: 'https://cdn.fastpixel.io/fp/ret_img+v_3ca7+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_fekete_1.jpg',
+                red: 'https://cdn.fastpixel.io/fp/ret_img+v_49a7+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_rozsaszin_1.jpg',
+                blue: 'https://cdn.fastpixel.io/fp/ret_img+v_b2c0+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_kek_1.jpg',
+                white: 'https://cdn.fastpixel.io/fp/ret_img+v_c179+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_platina_1.jpg'
+            };
+
+            colorInputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    const selectedColor = input.value;
+
+                    if (imageURLs[selectedColor]) {
+                        img.src = imageURLs[selectedColor];
+                        glass.style.backgroundImage = "url('" + img.src + "')";
+                    } else {
+                        console.error("Image URL not found for color:", selectedColor);
+                    }
+                });
+            });
+
+    </script>
+</body>
+</html>

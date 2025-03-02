@@ -1,0 +1,214 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.card-wrapper {
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 0.5s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.flip-checkbox {
+    visibility: hidden;
+}
+
+.flip-checkbox:checked + .card {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.back {
+    background: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.product-container {
+    position: relative;
+    overflow: hidden;
+    cursor: none; 
+    text-align: center; 
+    margin: 10px;
+}
+
+.product-image {
+    width: 80%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    display: block; 
+    margin: 0 auto; 
+}
+
+/* Magnifying Glass Effect */
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    width: 100px;
+    height: 100px;
+  }
+
+.product-container:hover .magnifying-glass {
+    opacity: 1;
+}
+
+.magnifying-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Color Options */
+.color-input {
+    display: none;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+    padding-top: 0;
+    padding: 10px;
+    z-index: 3;
+}
+
+.color-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+}
+
+.black { background-color: black; }
+.red { background-color: rgb(176, 142, 176); }
+.blue { background-color: rgb(43, 68, 135); }
+.white { background-color: rgb(172, 172, 172); border: 1px solid #ccc; }
+
+.color-input:checked + .color-btn {
+    border-color: black;
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.lower .price {
+    font-size: 24px;
+    padding: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* Buttons */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background: #355cc9;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.info-button {
+    width: 3%;
+}
+
+.add-to-cart {
+    width: 64%;
+}
+
+.save-button {
+    width: 13%;
+}
+
+.button:hover {
+    background: #1d3a8a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.star-rating {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: rgb(197, 167, 0);
+    letter-spacing: 3px;
+}
+
+.rating {
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.features p {
+    font-size: 14px;
+    margin: 2px;
+}
+
+.return {
+    margin-top: 20px;
+}
+
+.lower {
+    text-align: center;
+    height: 25%;
+}
+
+.lower p, .lower h2 {
+    padding: 0;
+    margin: 0;
+}
