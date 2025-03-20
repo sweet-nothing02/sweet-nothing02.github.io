@@ -1,214 +1,208 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-.card-wrapper {
-    perspective: 1500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #030303;
+    color: white;
+    overflow-x: hidden;
+}
+.background {
     width: 100vw;
     height: 100vh;
-}
-
-.card {
     position: relative;
-    width: 300px;
-    height: 420px;
-    transform-style: preserve-3d;
-    transform-origin: center;
-    transition: transform 0.5s cubic-bezier(0.75, 0, 0.85, 1);
+    background-size: cover;
+    background-position: center;
 }
-
-.flip-checkbox {
-    visibility: hidden;
+.background-top {
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.45) 70%, transparent), url("https://globaluniversity.edu/wp-content/uploads/2020/03/multiethnic-group-young-people-studying-together.jpg");
+    z-index: 100;
 }
-
-.flip-checkbox:checked + .card {
-    transform: rotateY(180deg);
-}
-
-.front, .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.background-middle {
+    background-image: url("https://cdn.prod.website-files.com/604a97c70aee09eed25ce991/61897a35583a9b51db018d3e_MartinPublicSeating-97560-Importance-School-Library-blogbanner1.jpg");
+    z-index: 50;
+    position: fixed;
     top: 0;
     left: 0;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 160vh;
+    background-size: cover;
 }
-
-.front {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.back {
-    background: white;
-    transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-
-.product-container {
+.background-bottom {
+    background-image: linear-gradient(to top, transparent 40%, rgba(0, 0, 0, 0.45) 70%, transparent), url("https://www.lasalle.edu/wp-content/uploads/2024/11/La-Salles-campus-1400x600.png");
+    z-index: 100;
     position: relative;
-    overflow: hidden;
-    cursor: none; 
-    text-align: center; 
-    margin: 10px;
+    top: 0;
+    height: 100vh;
 }
-
-.product-image {
-    width: 80%;
+.content {
+    position: relative;
+    z-index: 75;
+    text-align: center;
+    top: 120vh;
+}
+.content-inner {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0,123,255,0.2);
+}
+.content p {
+    font-size: 1.6rem;
+    line-height: 2;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+}
+.gadget {
+    position: absolute;
+    z-index: 150;
+    width: 350px;
     height: auto;
-    transition: opacity 0.3s ease-in-out;
-    display: block; 
-    margin: 0 auto; 
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
 }
-
-/* Magnifying Glass Effect */
-.img-magnifier-glass {
+.gadget-iphone {
+    top: 30vh;
+    left: -5vw;
+    rotate: 15deg;
+}
+.gadget-macbook {
+    top: 10vh;
+    right: 35vw;
+    rotate: -5deg;
+    width: 450px;
+    height: auto;
+}
+.gadget-ipad {
+    top: 220vh;
+    left: 5vw;
+    rotate: 10deg;
+}
+.gadget-watch {
+    top: 40vh;
+    right: 15vw;
+    width: 180px;
+    height: auto;
+}
+.gadget-airpods {
+    top: 110vh;
+    right: 10vw;
+    rotate: 3deg;
+}
+.hero-title {
     position: absolute;
-    border: 3px solid #000;
-    border-radius: 50%;
-    cursor: none;
-    width: 100px;
-    height: 100px;
-  }
-
-.product-container:hover .magnifying-glass {
-    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 200;
+    animation: fadeInUp 1s ease;
 }
-
-.magnifying-icon {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 30px;
-    transition: 0.3s ease-in-out;
+.hero-title h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background: linear-gradient(to right, #007bff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-/* Color Options */
-.color-input {
-    display: none;
+.hero-title h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.9);
 }
-
-.color-options {
+.comparison-table {
+    width: 100%;
+    margin: 3rem auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.comparison-table th, .comparison-table td {
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    text-align: left;
+    font-size: 1.1rem;
+}
+.comparison-table th {
+    background: linear-gradient(135deg, rgba(0,123,255,0.3), rgba(0,123,255,0.15));
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.plan-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00ff88;
+    text-align: center;
+}
+.button-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 0;
-    padding-top: 0;
-    padding: 10px;
-    z-index: 3;
+    gap: 3rem;
+    margin-top: 3rem;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
 }
-
-.color-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.button {
+    background: linear-gradient(135deg, #007bff, #00b4ff);
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
 }
-
-.black { background-color: black; }
-.red { background-color: rgb(176, 142, 176); }
-.blue { background-color: rgb(43, 68, 135); }
-.white { background-color: rgb(172, 172, 172); border: 1px solid #ccc; }
-
-.color-input:checked + .color-btn {
-    border-color: black;
-    transform: scale(1.2);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,123,255,0.5);
 }
-
-.lower .price {
-    font-size: 24px;
-    padding: 10px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    z-index: 300;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
-
-/* Buttons */
-.buttons-container {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-}
-
-.button {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
-    background: #355cc9;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    border: none;
 }
-
-.info-button {
-    width: 3%;
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    margin: 0 1.5rem;
+    transition: color 0.3s ease;
 }
-
-.add-to-cart {
-    width: 64%;
+.footer-links a:hover {
+    color: #00ff88;
 }
-
-.save-button {
-    width: 13%;
-}
-
-.button:hover {
-    background: #1d3a8a;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.star-rating {
-    display: inline-block;
-    font-size: 1.2rem;
-    color: rgb(197, 167, 0);
-    letter-spacing: 3px;
-}
-
-.rating {
-    display: inline-block;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.features p {
-    font-size: 14px;
-    margin: 2px;
-}
-
-.return {
-    margin-top: 20px;
-}
-
-.lower {
-    text-align: center;
-    height: 25%;
-}
-
-.lower p, .lower h2 {
-    padding: 0;
-    margin: 0;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }

@@ -4,177 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7a2e7b22c5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card-wrapper">
-        <input type="checkbox" id="flip" class="flip-checkbox">
-        <div class="card">
-            <div class="front">
-                <div class="inner">
-                    <div class="upper">
-                        <div class="magnifying-icon">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </div>
-                        <div class="product-container">
-                            <img src="https://cdn.fastpixel.io/fp/ret_img+v_3ca7+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_fekete_1.jpg" class="product-image" id="product-img">
-                        </div>
-                        <div class="color-options">
-                            <input type="radio" id="color-black" name="color" class="color-input" value="black" checked>
-                            <label for="color-black" class="color-btn black"></label>
+    <div class="background background-top">
+        <div class="hero-title">
+            <h1>EduTech Suite</h1>
+            <h2>Invest Little • Create Big • Achieve More</h2>
+        </div>
+    </div>
+    <div class="background background-middle"></div>
+    <div class="content" id="content">
+        <div class="content-inner">
+            <p>Transform your academic journey with our premium tech subscription service. Get unlimited access to cutting-edge technology including the latest iPhone 16, powerful MacBook Air M4, versatile iPad, innovative Apple Watch, and immersive AirPods Max. Elevate your learning experience while we handle the technology.</p>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th class="plan-header">Smart Plan $129/month</th>
+                    <th class="plan-header">Smart Plus Plan $199/month</th>
+                </tr>
+                <tr>
+                    <td>Core Devices Included</td>
+                    <td>3 primary devices</td>
+                    <td>5 premium devices</td>
+                </tr>
+                <tr>
+                    <td>Hardware Refresh Cycle</td>
+                    <td>Annual upgrades</td>
+                    <td>Semi-annual upgrades</td>
+                </tr>
+                <tr>
+                    <td>Premium Support</td>
+                    <td>Business hours support</td>
+                    <td>24/7 priority support</td>
+                </tr>
+                <tr>
+                    <td>Cloud Storage</td>
+                    <td>Google One Basic 100GB</td>
+                    <td>Google One AI Premium 2TB</td>
+                </tr>
+                <tr>
+                    <td>Device Protection</td>
+                    <td>Basic accident coverage</td>
+                    <td>Full damage replacement</td>
+                </tr>
+                <tr>
+                    <td>Software Suite</td>
+                    <td>YouTube Premium, Apple+</td>
+                    <td>Office 365, YouTube Premium, Apple+, Amazon Prime, Netflix</td>
+                </tr>
+                <tr>
+                    <td>Exclusive Webinars</td>
+                    <td>Monthly sessions</td>
+                    <td>Weekly masterclasses</td>
+                </tr>
+                <tr>
+                    <td>Community Access</td>
+                    <td>Basic forum access</td>
+                    <td>Premium mentorship program</td>
+                </tr>
+            </table>
+        </div>
+        <div class="gadgets">
+            <img class="gadget gadget-iphone" src="https://s7d1.scene7.com/is/image/dish/iPhone-16-Ultramarine-2?$ProductBase$&fmt=webp-alpha" alt="iPhone">
+            <img class="gadget gadget-macbook" src="https://static0.xdaimages.com/wordpress/wp-content/uploads/2025/03/m4-macbook-air.png" alt="MacBook">
+            <img class="gadget gadget-ipad" src="https://www.telekom.hu/shop/static-tkws-media/sku/IPAD_AIR_11_128GB_2025__SGR/ProductPictures/ProductPictures01/IPAD_AIR_11_128GB_2025__SGR_01_400.png" alt="iPad">
+            <img class="gadget gadget-watch" src="https://www.cellularsales.com/wp-content/uploads/2024/09/Apple_Watch_10_Gold.png" alt="Apple Watch">
+            <img class="gadget gadget-airpods" src="https://www.ourfriday.co.uk/image/cache/catalog/Apple/apple-airpods-max-usbc-skyblue-3-1200x1200.png" alt="AirPods Max"></img>
+        </div>
+    </div>
+    <div class="background background-bottom">
+        <div class="button-container">
+            <button class="button button-plan">Start Smart</button>
+            <button class="button button-plan">Go Plus</button>
+        </div>
+    </div>
 
-                            <input type="radio" id="color-red" name="color" class="color-input" value="red">
-                            <label for="color-red" class="color-btn red"></label>
-
-                            <input type="radio" id="color-blue" name="color" class="color-input" value="blue">
-                            <label for="color-blue" class="color-btn blue"></label>
-
-                            <input type="radio" id="color-white" name="color" class="color-input" value="white">
-                            <label for="color-white" class="color-btn white"></label>
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <h2>Sony WH-1000XM5</h2>
-                        <div class="star-rating">★★★★☆</div>
-                        <div class="rating"><b>4.22</b> (5837 ratings)</div>
-                        <p class="price">€349.99</p>
-                    </div>
-                    <div class="buttons-container">
-                        <label for="flip" class="button info-button"><i class="fa-solid fa-circle-info"></i></label>
-                        <button class="button add-to-cart">Add to Cart</button>
-                        <button class="button save-button"><i class="fa-solid fa-heart-circle-plus"></i></button>
-                    </div>
-
-                </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms</a>
             </div>
-
-            <div class="back">
-                <div class="inner">
-                    <p>WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones</p>
-                    <ul class="features">
-                        <li>
-                            <p><b>Bluetooth</b></p>
-                            <p>5.2</p>
-                        </li>
-                        <li>
-                            <p><b>ANC</b></p>
-                            <p>Yes</p>
-                        </li>
-                        <li>
-                            <p><b>Transparency mode</b></p>
-                            <p>Yes</p>
-                        </li>
-                        <li>
-                            <p><b>Drivers</b></p>
-                            <p>40mm</p>
-                        </li>
-                        <li>
-                            <p><b>Battery life</b></p>
-                            <p>30h</p>
-                        </li>
-                        <li>
-                            <p><b>Charging time</b></p>
-                            <p>3h</p>
-                        </li>
-                    </ul>
-                    <div class="availability">
-                        <p><b>Free shipping:</b> Est. delivery Mar. 4-5 <b>or</b></p>
-                        <p><b>Pick up</b> as early as today</p>
-                    </div>
-                    <label for="flip" class="button return"><i class="fa-solid fa-share"></i></label>
-                </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </div>
-        <script>
-            const img = document.getElementById('product-img');
-            const productContainer = document.querySelector('.product-container');
-            const magnifier = document.querySelector('.magnifying-icon')
-            productContainer.addEventListener('mouseenter', magnify);
-            productContainer.addEventListener('mouseleave', hide);
-            
-            let glass = document.createElement('div');
-            glass.setAttribute('class', 'img-magnifier-glass');
-            img.parentElement.insertBefore(glass, img);
-            glass.style.display = 'none';
-            function hide(){
-                glass.style.display = 'none';
-                magnifier.style.opacity = '1';
-            }
-            function magnify(){
-                magnifier.style.opacity = '0';
-                let zoom = 3;
-                let w, h, bw;
 
-                glass.style.backgroundImage = "url('" + img.src + "')";
-                glass.style.backgroundRepeat = "no-repeat";
-                glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-                bw = 3;
-                w = glass.offsetWidth / 2;
-                h = glass.offsetHeight / 2;
-                
-
-                glass.style.display = 'block';
-
-                glass.addEventListener("mousemove", moveMagnifier);
-                img.addEventListener("mousemove", moveMagnifier);
-
-                glass.addEventListener("touchmove", moveMagnifier);
-                img.addEventListener("touchmove", moveMagnifier);
-                
-                function moveMagnifier(e) {
-                    var pos, x, y;
-                    e.preventDefault();
-                    pos = getCursorPos(e);
-                    x = pos.x;
-                    y = pos.y;
-                    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
-                    if (x < w / zoom) {x = w / zoom;}
-                    if (y > img.height - (h / zoom) - 60) {y = img.height - (h / zoom);}
-                    if (y < h / zoom) {y = h / zoom;}
-                    
-                    glass.style.left = (x - w) + "px";
-                    glass.style.top = (y - h) + "px";
-
-                    glass.style.backgroundPosition = "-" + (((x) * zoom) - w + bw) + "px -" + (((y + 30) * zoom) - h + bw) + "px";
-                }
-
-                function getCursorPos(e) {
-                    var a, x = 0, y = 0;
-                    e = e || window.event;
-                    
-                    a = img.getBoundingClientRect();
-
-                    x = e.pageX - a.left;
-                    y = e.pageY - a.top;
-                    x = x - window.pageXOffset;
-                    y = y - window.pageYOffset;
-                    return {x : x, y : y};
-                }
-            }
-
-            const colorInputs = document.querySelectorAll('.color-input');
-            const imageURLs = {
-                black: 'https://cdn.fastpixel.io/fp/ret_img+v_3ca7+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_fekete_1.jpg',
-                red: 'https://cdn.fastpixel.io/fp/ret_img+v_49a7+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_rozsaszin_1.jpg',
-                blue: 'https://cdn.fastpixel.io/fp/ret_img+v_b2c0+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_kek_1.jpg',
-                white: 'https://cdn.fastpixel.io/fp/ret_img+v_c179+w_1080+h_1080+q_glossy+to_webp/sonyszalon.hu/wp-content/uploads/2024/10/Sony-WH_1000XM5-fejhallgato_platina_1.jpg'
-            };
-
-            colorInputs.forEach(input => {
-                input.addEventListener('change', () => {
-                    const selectedColor = input.value;
-
-                    if (imageURLs[selectedColor]) {
-                        img.src = imageURLs[selectedColor];
-                        glass.style.backgroundImage = "url('" + img.src + "')";
-                    } else {
-                        console.error("Image URL not found for color:", selectedColor);
-                    }
-                });
-            });
-
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
