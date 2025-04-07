@@ -10877,3 +10877,72 @@ section#contact button:active {
   object-fit: contain;
 }
 
+.modal-body a {
+  color: rgb(77, 77, 201);
+}
+
+.footer-parallax-wrapper {
+  position: relative;
+  height: 0;
+  width: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.footer-parallax {
+  position: absolute;
+  bottom: -100px;
+  /* width: auto;
+  height: 140px; */
+  opacity: 0.95;
+  transition: transform 0.2s ease-out;
+}
+
+.footer-parallax.arrow-left {
+  width: auto;
+  height: 150px;
+  left: 35%;
+}
+
+.footer-parallax.arrow-right {
+  width: auto;
+  height: 180px;
+  right: 37%;
+}
+
+.footer-parallax.plant {
+  width: auto;
+  height: 200px;
+  left: 8%;
+}
+
+.footer-parallax.paper-plane {
+  width: auto;
+  height: 170px;
+  left: 58%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .footer-parallax-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-parallax-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-parallax-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-parallax-wrapper {
+    display: block;
+  }
+}

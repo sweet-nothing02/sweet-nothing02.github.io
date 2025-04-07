@@ -29,7 +29,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutMe">About Me</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
@@ -48,10 +48,11 @@
                             <a class="btn btn-dark btn-social mx-2" href="https://github.com/sweet-nothing02" title="GitHub"><i class="fab fa-github"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://gitlab.com/sweet-nothing02" title="GitLab"><i class="fab fa-gitlab"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/kemran-abdrashid-959a91223" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark mx-2" href="#portfolioModal0" data-toggle="modal">Resume</a>
                         </div>
                     </div>
                     <div class="masthead-image">
-                        <img src="../assets/img/developer.png" alt="Software Developer Illustration">
+                        <img src="assets/img/developer.png" alt="Software Developer Illustration">
                     </div>
                 </div>
             </div>
@@ -151,18 +152,36 @@
                 <div class="row">
                     <!-- <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/01-thumbnail.jpg" alt="" />
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal0">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div class="image-container">
+                                <img class="portfolio-img" src="assets/img/bomberman.png" alt="Bomberman" />
+                            </div>
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">SocialHub</div>
-                                <div class="portfolio-caption-subheading text-muted">Django, React.js, PostgreSQL</div>
+                            <div class="portfolio-caption-heading">Bomberman game</div>
+                            <div class="portfolio-caption-subheading text-muted">PyGame, PyTest, SQLite</div>
                             </div>
                         </div>
                     </div> -->
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div class="image-container">
+                                <img class="portfolio-img" src="assets/img/thesis.png" alt="Bomberman" />
+                            </div>
+                            </a>
+                            <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">SocialHub</div>
+                            <div class="portfolio-caption-subheading text-muted">Django, React.js, ChakraUI, PostgreSQL</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
@@ -384,8 +403,8 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="typewriter" data-type="Let's connect!" style="color: white;"></h2>
-                    <h3 class="section-subheading text-muted">And create brilliant things together</h3>
+                    <h2 class="typewriter text-white" data-type="Let's connect!"></h2>
+                    <h3 class="section-subheading text-white">And create brilliant things together</h3>
                 </div>
                 <form id="contactForm" name="sentMessage" novalidate="novalidate">
                     <div class="row align-items-stretch mb-5">
@@ -419,20 +438,54 @@
         </section>
         <!-- Footer-->
         <footer class="footer py-4">
+            <div class="footer-parallax-wrapper">
+                <img src="assets/img/line1.png" alt="Left Arrow" class="footer-parallax arrow-left">
+                <img src="assets/img/line2.png" alt="Right Arrow" class="footer-parallax arrow-right">
+                <img src="assets/img/plane2.png" alt="Footer Plane" class="footer-parallax paper-plane">
+                <img src="assets/img/plant.webp" alt="Footer Plane" class="footer-parallax plant">
+              </div>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">© 2025 - All rights reserved</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" title="GitLab"><i class="fab fa-gitlab"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/sweet-nothing02" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://gitlab.com/sweet-nothing02" title="GitLab"><i class="fab fa-gitlab"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/kemran-abdrashid-959a91223" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- Portfolio Modals-->
+        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Resume</h2>
+                                    <div style="height: 90vh;">
+                                        <object data="assets/CV.pdf" type="application/pdf" width="100%" height="100%">
+                                          <p>Alternative text - include a link <a href="assets/CV.pdf">to the PDF!</a></p>
+                                        </object>
+                                      </div>
+                                    <ul class="list-inline">
+                                        <li>Last updated: April 2025</li>
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Modal 1-->
-        <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
@@ -441,9 +494,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">SocialHub</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p class="item-intro text-muted">A brand new social media</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/thesis.png" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/thesis2.png" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/thesis3.png" alt="" />
+                                    <a href="https://gitlab.com/elte6150544/socialHub">More info on GitLab</a>
                                     <ul class="list-inline">
                                         <li>Date: February 2025</li>
                                         <li>University thesis</li>
@@ -451,7 +506,7 @@
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -459,7 +514,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Modal 2-->
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -471,9 +526,9 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Bomberman game</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <p class="item-intro text-muted">Beloved classic 2-player 2D game</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/bomberman.png" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <a href="http://github.com/sweet-nothing02/bomberman">Source code</a>
                                     <ul class="list-inline">
                                         <li>Date: May 2024</li>
                                         <li>University project</li>
@@ -481,7 +536,7 @@
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -501,9 +556,9 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Yogi Bear game</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <p class="item-intro text-muted">Fun 1-player 2D game</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/yogi.png" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <a href="http://github.com/sweet-nothing02/YogiBear">Source code</a>
                                     <ul class="list-inline">
                                         <li>Date: January 2024</li>
                                         <li>University project</li>
@@ -511,7 +566,7 @@
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -531,10 +586,10 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">iCarRental</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <p class="item-intro text-muted">Car rental web service</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/icar1.jpg" alt="" />
                                     <img class="img-fluid d-block mx-auto" src="assets/img/icar2.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <a href="http://github.com/sweet-nothing02/iCarRental">Source code</a>
                                     <ul class="list-inline">
                                         <li>Date: December 2024</li>
                                         <li>University project</li>
@@ -542,7 +597,7 @@
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -562,9 +617,9 @@
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Railways game</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <p class="item-intro text-muted">1-player puzzle 2D game</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/railways.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <a href="http://github.com/sweet-nothing02/Railways">Source code</a>
                                     <ul class="list-inline">
                                         <li>Date: November 2024</li>
                                         <li>University project</li>
@@ -572,7 +627,7 @@
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -601,7 +656,7 @@
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>

@@ -130,10 +130,56 @@ document.addEventListener("scroll", () => {
 
     const parallaxImg = document.querySelector('.timeline-parallax img');
     if (parallaxImg) {
-        const speedFactor = 0.11;
+        const speedFactor = 0.115;
         let parent = parallaxImg.parentNode.parentNode;
         const rect = parent.getBoundingClientRect();
         const offset = (window.scrollY - 3*rect.top) * speedFactor;
         parallaxImg.style.transform = `translateY(${offset}px)`;
+    }
+
+    const footerWrapper = document.querySelector(".footer-parallax-wrapper");
+    if (footerWrapper) {
+        const rect = footerWrapper.getBoundingClientRect();
+        const baseOffset = window.scrollY - 3*rect.bottom;
+        
+        const speed1 = 0.011;
+        const offset1 = baseOffset * speed1;
+        const img1 = document.querySelector(".arrow-left");
+        img1.style.transform = `translateY(-${offset1}px)`;
+
+        
+        const speed2 = 0.012;
+        const offset2 = baseOffset * speed2;
+        const img2 = document.querySelector(".arrow-right")
+        img2.style.transform = `translateY(-${offset2}px)`;
+
+        const speed3 = 0.055;
+        const offset3 = baseOffset * speed3;
+        const img3 = document.querySelector(".paper-plane")
+        img3.style.transform = `translateY(-${offset3}px)`;
+
+        const speed4 = 0.045;
+        const offset4 = baseOffset * speed4;
+        const img4 = document.querySelector(".plant")
+        img4.style.transform = `translateY(-${offset4}px)`;
+
+        // img1.style.transform = `translateY(-${offset}px)`;
+        // img2.style.transform = `translateY(-${offset}px)`;
+        // document.querySelectorAll(".footer-parallax").forEach(img => {
+        //     const speed = 0.04; // tweak each if needed
+        //     img.style.transform = `translateY(-${offset}px)`;
+        // });
+
+        // document.querySelectorAll(".footer-parallax").forEach(img => {
+        //     const speed = 0.04; // tweak each if needed
+        //     const offset = baseOffset * speed;
+        //     img.style.transform = `translateY(-${offset}px)`;
+        // });
+
+        // document.querySelectorAll(".footer-parallax").forEach(img => {
+        //     const speed = 0.04; // tweak each if needed
+        //     const offset = baseOffset * speed;
+        //     img.style.transform = `translateY(-${offset}px)`;
+        // });
     }
 });
