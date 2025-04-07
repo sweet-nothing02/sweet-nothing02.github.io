@@ -10877,7 +10877,7 @@ section#contact button:active {
   object-fit: contain;
 }
 
-.modal-body a {
+.modal-body a, .timeline-heading a {
   color: rgb(77, 77, 201);
 }
 
