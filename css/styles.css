@@ -10913,13 +10913,15 @@ section#contact button:active {
 .footer-parallax.plant {
   width: auto;
   height: 200px;
-  left: 8%;
+  left: -80px;
+  bottom: 200px;
 }
 
 .footer-parallax.paper-plane {
+  bottom: -100px;
   width: auto;
   height: 170px;
-  left: 58%;
+  right: 20%;
   transform: translateX(-50%);
 }
 

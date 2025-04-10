@@ -153,15 +153,16 @@ document.addEventListener("scroll", () => {
         const img2 = document.querySelector(".arrow-right")
         img2.style.transform = `translateY(-${offset2}px)`;
 
-        const speed3 = 0.055;
+        const speed3 = 0.058;
         const offset3 = baseOffset * speed3;
         const img3 = document.querySelector(".paper-plane")
-        img3.style.transform = `translateY(-${offset3}px)`;
+        img3.style.transform = `translate(-${offset3}px, -${offset3}px)`;
 
         const speed4 = 0.045;
         const offset4 = baseOffset * speed4;
         const img4 = document.querySelector(".plant")
-        img4.style.transform = `translateY(-${offset4}px)`;
+        img4.style.transform = `translate(${offset4}px, ${offset4}px)`;
+        // img4.style.transform = ``;
 
         // img1.style.transform = `translateY(-${offset}px)`;
         // img2.style.transform = `translateY(-${offset}px)`;
