@@ -130,7 +130,7 @@ document.addEventListener("scroll", () => {
 
     const parallaxImg = document.querySelector('.timeline-parallax img');
     if (parallaxImg) {
-        const speedFactor = 0.115;
+        const speedFactor = 0.14;
         let parent = parallaxImg.parentNode.parentNode;
         const rect = parent.getBoundingClientRect();
         const offset = (window.scrollY - 3*rect.top) * speedFactor;
@@ -184,3 +184,8 @@ document.addEventListener("scroll", () => {
         // });
     }
 });
+
+function sendAnimation(){
+    const img4 = document.querySelector(".plant")
+    img4.style.transform = `translate(${offset4}px, ${offset4}px)`;
+}
